@@ -3,11 +3,15 @@
   "slug": "architecture-portfolio",
   "title": "建筑设计作品集",
   "type": "architecture",
-  "summary": "建筑学本科阶段综合设计成果。",
+  "summary": "建筑学本科阶段综合设计成果，涵盖竞赛、课程与工作坊。",
   "date": "2020-2025",
   "cover": "/works/assets/architecture/吴欣睿_作品成果（附简历）_04.png",
   "images": [
-    "/works/assets/architecture/吴欣睿_作品成果（附简历）_04.png"
+    "/works/assets/architecture/吴欣睿_作品成果（附简历）_04.png",
+    "/works/assets/architecture/绿色高校-1.png",
+    "/works/assets/architecture/绿色高校-2.png",
+    "/works/assets/architecture/evolo-1.jpg",
+    "/works/assets/architecture/evolo-2.jpg"
   ],
   "pending": false,
   "externalUrl": "/works/assets/architecture/建筑设计作品集.pdf",

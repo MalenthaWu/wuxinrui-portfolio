@@ -109,6 +109,14 @@ export interface FooterContent {
   socialLinks: { label: string; url: string }[];
 }
 
+export interface CampusExperienceItem {
+  type: "role" | "honor";
+  organization?: string;
+  role?: string;
+  title?: string;
+  period?: string;
+}
+
 export interface EducationItem {
   id: string;
   school: string;
@@ -120,10 +128,10 @@ export interface EducationItem {
   city: string;
   province: string;
   logo?: string;
-  mapPosition: { x: number; y: number };
+  coordinates: { lng: number; lat: number };
   highlights: string[];
   badges?: string[];
-  honors?: string[];
+  campusExperience?: CampusExperienceItem[];
 }
 
 export interface HonorGroup {

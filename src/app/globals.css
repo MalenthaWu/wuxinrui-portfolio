@@ -54,3 +54,7 @@ body {
     transform: translateY(0);
   }
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

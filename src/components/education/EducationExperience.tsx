@@ -2,7 +2,23 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import type { EducationContent } from "@/lib/types";
+import type { CampusExperienceItem, EducationContent } from "@/lib/types";
+import { ChinaEducationMap } from "./ChinaEducationMap";
+
+function formatCampusExperience(item: CampusExperienceItem) {
+  if (item.type === "role") {
+    return {
+      primary: item.organization ?? "",
+      secondary: item.role,
+      period: item.period,
+    };
+  }
+  return {
+    primary: item.title ?? "",
+    secondary: undefined,
+    period: item.period,
+  };
+}
 
 export function EducationExperience({ education }: { education: EducationContent }) {
   const [activeId, setActiveId] = useState(education.degrees[0]?.id ?? "");
@@ -14,90 +30,23 @@ export function EducationExperience({ education }: { education: EducationContent
       {/* Map + schools */}
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
         <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#e8f0fe] via-surface to-[#f0f4ff] p-6 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.1)] ring-1 ring-black/[0.04] md:p-10">
-          <p className="mb-6 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-muted">
+          <p className="mb-2 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-muted">
             Education Journey
           </p>
+          <p className="mb-6 text-[0.8125rem] text-muted">徐州 → 杭州 · 成长轨迹</p>
 
-          <div className="relative aspect-[4/3] w-full">
-            <svg
-              viewBox="0 0 100 80"
-              className="h-full w-full"
-              aria-label="中国教育地图示意"
-            >
-              <defs>
-                <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#007AFF" stopOpacity="0.08" />
-                  <stop offset="100%" stopColor="#5856D6" stopOpacity="0.04" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M15 25 Q35 15 55 20 T85 30 Q90 45 80 60 Q65 72 45 68 Q25 65 18 50 Z"
-                fill="url(#mapGrad)"
-                stroke="rgba(0,113,227,0.15)"
-                strokeWidth="0.5"
-                className="animate-[pulse_4s_ease-in-out_infinite]"
-              />
-              {education.degrees.map((degree, index) => (
-                <g key={degree.id}>
-                  {index > 0 && (
-                    <line
-                      x1={education.degrees[index - 1].mapPosition.x}
-                      y1={education.degrees[index - 1].mapPosition.y}
-                      x2={degree.mapPosition.x}
-                      y2={degree.mapPosition.y}
-                      stroke="#007AFF"
-                      strokeWidth="0.4"
-                      strokeDasharray="2 1.5"
-                      opacity="0.5"
-                      className="transition-all duration-500"
-                    />
-                  )}
-                  <circle
-                    cx={degree.mapPosition.x}
-                    cy={degree.mapPosition.y}
-                    r={activeId === degree.id ? 3.5 : 2.5}
-                    fill={activeId === degree.id ? "#007AFF" : "#86868b"}
-                    className="cursor-pointer transition-all duration-300"
-                    onClick={() => setActiveId(degree.id)}
-                  />
-                  {activeId === degree.id && (
-                    <circle
-                      cx={degree.mapPosition.x}
-                      cy={degree.mapPosition.y}
-                      r="6"
-                      fill="none"
-                      stroke="#007AFF"
-                      strokeWidth="0.4"
-                      opacity="0.6"
-                      className="animate-ping"
-                    />
-                  )}
-                </g>
-              ))}
-            </svg>
-
-            {education.degrees.map((degree) => (
-              <button
-                key={degree.id}
-                type="button"
-                onClick={() => setActiveId(degree.id)}
-                className="absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
-                style={{
-                  left: `${degree.mapPosition.x}%`,
-                  top: `${degree.mapPosition.y}%`,
-                }}
-              >
-                <span
-                  className={`block whitespace-nowrap rounded-full px-2.5 py-1 text-[0.6875rem] font-medium transition-all ${
-                    activeId === degree.id
-                      ? "bg-accent text-white shadow-md"
-                      : "bg-surface/90 text-muted ring-1 ring-black/[0.06]"
-                  }`}
-                >
-                  {degree.city}
-                </span>
-              </button>
-            ))}
+          <div className="relative aspect-[800/620] w-full">
+            <ChinaEducationMap
+              activeId={activeId}
+              markers={education.degrees.map((degree) => ({
+                id: degree.id,
+                city: degree.city,
+                lng: degree.coordinates.lng,
+                lat: degree.coordinates.lat,
+                active: degree.id === activeId,
+                onSelect: () => setActiveId(degree.id),
+              }))}
+            />
           </div>
         </div>
 
@@ -151,21 +100,31 @@ export function EducationExperience({ education }: { education: EducationContent
                 ))}
               </div>
 
-              {activeDegree.honors && activeDegree.honors.length > 0 && (
+              {activeDegree.campusExperience && activeDegree.campusExperience.length > 0 && (
                 <div className="border-t border-black/[0.06] pt-5">
                   <p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-muted">
-                    在校荣誉
+                    在校经历
                   </p>
-                  <ul className="space-y-2">
-                    {activeDegree.honors.map((honor) => (
-                      <li
-                        key={honor}
-                        className="flex items-start gap-2 text-[0.875rem] text-muted"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        {honor}
-                      </li>
-                    ))}
+                  <ul className="space-y-3">
+                    {activeDegree.campusExperience.map((item) => {
+                      const { primary, secondary, period } = formatCampusExperience(item);
+                      const key = `${item.type}-${primary}-${period ?? ""}`;
+
+                      return (
+                        <li key={key} className="flex items-start gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                          <div className="min-w-0 flex-1">
+                            <p className="text-[0.875rem] font-medium text-foreground">{primary}</p>
+                            {secondary && (
+                              <p className="mt-0.5 text-[0.8125rem] text-muted">{secondary}</p>
+                            )}
+                            {period && (
+                              <p className="mt-0.5 text-[0.75rem] text-muted/70">{period}</p>
+                            )}
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}

@@ -11,10 +11,37 @@
       "city": "杭州",
       "province": "浙江",
       "logo": "/logos/zju.svg",
-      "mapPosition": { "x": 78, "y": 62 },
-      "highlights": ["985", "双一流"],
-      "badges": ["985", "双一流"],
-      "honors": ["浙大研究生新媒体中心 · 摄影组长"]
+      "coordinates": { "lng": 120.15, "lat": 30.25 },
+      "highlights": ["建筑学硕士在读"],
+      "badges": ["C9联盟"],
+      "campusExperience": [
+        {
+          "type": "role",
+          "organization": "浙大研究生新媒体中心",
+          "role": "摄影组长 · 内容策划负责人",
+          "period": "2025/09 – 至今"
+        },
+        {
+          "type": "honor",
+          "title": "浙江大学五好研究生",
+          "period": "2025"
+        },
+        {
+          "type": "honor",
+          "title": "浙江大学学业优秀一等奖学金",
+          "period": "2024"
+        },
+        {
+          "type": "honor",
+          "title": "浙江大学研究生创新创业大赛铜奖",
+          "period": "2025"
+        },
+        {
+          "type": "honor",
+          "title": "大学生结构设计竞赛 · 省赛一等奖 / 国赛三等奖",
+          "period": "2025"
+        }
+      ]
     },
     {
       "id": "cumt",
@@ -27,14 +54,52 @@
       "city": "徐州",
       "province": "江苏",
       "logo": "/logos/cumt.svg",
-      "mapPosition": { "x": 68, "y": 48 },
+      "coordinates": { "lng": 117.18, "lat": 34.26 },
       "highlights": ["GPA 4.3/5.0", "综合成绩排名 1/84"],
       "badges": ["211", "双一流"],
-      "honors": [
-        "连续三年国家奖学金",
-        "校优秀毕业生",
-        "十佳女大学生",
-        "孙越崎能源科学技术优秀学生奖"
+      "campusExperience": [
+        {
+          "type": "role",
+          "organization": "共青团中国矿业大学设计学院委员会",
+          "role": "宣教部部长 · 内容运营负责人",
+          "period": "2021/07 – 2022/07"
+        },
+        {
+          "type": "role",
+          "organization": "中国共产党中国矿业大学设计学院党站",
+          "role": "主任 · 项目协同负责人",
+          "period": "2023/07 – 2024/07"
+        },
+        {
+          "type": "honor",
+          "title": "国家奖学金",
+          "period": "2021 – 2023（连续三年）"
+        },
+        {
+          "type": "honor",
+          "title": "校级优秀毕业生",
+          "period": "2024/06"
+        },
+        {
+          "type": "honor",
+          "title": "校级十佳女大学生",
+          "period": "2023/05"
+        },
+        {
+          "type": "honor",
+          "title": "孙越崎能源科学技术优秀学生奖",
+          "period": "2023"
+        },
+        {
+          "type": "honor",
+          "title": "米兰设计周国赛一等奖",
+          "period": "2021/12"
+        },
+        {
+          "type": "honor",
+          "title": "全国大学生数学建模大赛三等奖",
+          "period": "2021/11"
+        }
       ]
     }
   ],
