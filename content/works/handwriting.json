@@ -1,0 +1,21 @@
+{
+  "id": "handwriting",
+  "slug": "handwriting",
+  "title": "书法作品",
+  "type": "design",
+  "summary": "书法练习与创作。",
+  "date": "2021",
+  "cover": "/works/assets/design/handwriting/IMG_9404(20211115-190311).JPG",
+  "images": [
+    "/works/assets/design/handwriting/IMG_9404(20211115-190311).JPG"
+  ],
+  "pending": false,
+  "context": "传统书法美学练习。",
+  "myRole": "创作者",
+  "decisions": [
+    "笔法与章法",
+    "传统与现代平衡"
+  ],
+  "outcome": "完成书法作品集。",
+  "aiPmConnection": "东方美学与排版韵律感。"
+}

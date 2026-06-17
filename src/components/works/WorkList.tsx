@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import type { Work } from "@/lib/types";
+import { assetPath } from "@/lib/asset-path";
 
 const typeLabels: Record<Work["type"], string> = {
   photography: "摄影",
@@ -10,18 +12,11 @@ const typeLabels: Record<Work["type"], string> = {
   design: "设计",
 };
 
-const typeDescriptions: Record<Work["type"], string> = {
-  photography: "人像、风光与建筑摄影创作",
-  architecture: "建筑方案、竞赛与概念设计",
-  design: "平面、文创与视觉设计",
+const photoSubtypeLabels: Record<string, string> = {
+  portrait: "人像",
+  landscape: "风光",
+  "architecture-photo": "建筑摄影",
 };
-
-const tabs: { id: "all" | Work["type"]; label: string }[] = [
-  { id: "all", label: "全部" },
-  { id: "photography", label: "摄影" },
-  { id: "architecture", label: "建筑" },
-  { id: "design", label: "设计" },
-];
 
 export function WorkList({ works }: { works: Work[] }) {
   const [activeType, setActiveType] = useState<"all" | Work["type"]>("all");
@@ -36,6 +31,13 @@ export function WorkList({ works }: { works: Work[] }) {
           items: works.filter((w) => w.type === type),
         }))
       : [{ type: activeType, items: filtered }];
+
+  const tabs: { id: "all" | Work["type"]; label: string }[] = [
+    { id: "all", label: "全部" },
+    { id: "photography", label: "摄影" },
+    { id: "architecture", label: "建筑" },
+    { id: "design", label: "设计" },
+  ];
 
   return (
     <div className="space-y-12">
@@ -60,88 +62,63 @@ export function WorkList({ works }: { works: Work[] }) {
         ({ type, items }) =>
           items.length > 0 && (
             <section key={type}>
-              <div className="mb-6">
-                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-foreground">
-                  {typeLabels[type]}
-                </h2>
-                <p className="mt-1 text-[0.875rem] text-muted">{typeDescriptions[type]}</p>
-              </div>
+              <h2 className="mb-6 text-[1.5rem] font-semibold tracking-[-0.02em] text-foreground">
+                {typeLabels[type]}
+                <span className="ml-2 text-[0.875rem] font-normal text-muted">
+                  {items.length} 组
+                </span>
+              </h2>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {items.map((work) => (
-                  <article
+                  <Link
                     key={work.id}
+                    href={`/works/${work.slug}`}
                     className="group flex flex-col overflow-hidden rounded-2xl bg-surface ring-1 ring-black/[0.04] transition-all hover:-translate-y-0.5 hover:shadow-lg"
                   >
-                    <div className="relative aspect-[4/3] bg-gradient-to-br from-foreground/[0.03] to-foreground/[0.08]">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-foreground/[0.04]">
                       {work.cover ? (
                         <Image
-                          src={work.cover}
+                          src={assetPath(work.cover)}
                           alt={work.title}
                           fill
+                          sizes="(max-width:768px) 100vw, 33vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                       ) : (
-                        <div className="flex h-full items-center justify-center">
-                          <span className="text-[0.75rem] font-medium uppercase tracking-[0.2em] text-muted/50">
-                            {typeLabels[work.type]}
-                          </span>
+                        <div className="flex h-full items-center justify-center text-[0.75rem] text-muted">
+                          {typeLabels[work.type]}
                         </div>
                       )}
-                      {work.pending && (
-                        <span className="absolute right-3 top-3 rounded-full bg-foreground/80 px-2.5 py-1 text-[0.6875rem] font-medium text-background backdrop-blur-sm">
-                          链接待补充
+                      {work.images && work.images.length > 1 && (
+                        <span className="absolute bottom-3 right-3 rounded-full bg-black/50 px-2 py-0.5 text-[0.6875rem] text-white backdrop-blur-sm">
+                          {work.images.length} 张
+                        </span>
+                      )}
+                      {work.subtype && (
+                        <span className="absolute left-3 top-3 rounded-full bg-surface/90 px-2 py-0.5 text-[0.6875rem] font-medium text-foreground backdrop-blur-sm">
+                          {photoSubtypeLabels[work.subtype] ?? work.subtype}
                         </span>
                       )}
                     </div>
 
                     <div className="flex flex-1 flex-col p-4">
-                      <div className="mb-2 flex items-center justify-between">
-                        <span className="text-[0.6875rem] font-medium text-accent">
-                          {typeLabels[work.type]}
-                        </span>
-                        {work.date && (
-                          <span className="text-[0.6875rem] text-muted">{work.date}</span>
-                        )}
-                      </div>
-                      <h3 className="mb-2 text-[0.9375rem] font-semibold text-foreground">
+                      <h3 className="mb-1 text-[0.9375rem] font-semibold text-foreground group-hover:text-accent">
                         {work.title}
                       </h3>
-                      <p className="mb-3 line-clamp-2 flex-1 text-[0.8125rem] leading-relaxed text-muted">
+                      <p className="line-clamp-2 flex-1 text-[0.8125rem] text-muted">
                         {work.summary}
                       </p>
-                      <p className="mb-4 line-clamp-2 text-[0.75rem] text-muted/80">
-                        <span className="text-foreground/60">AI PM · </span>
-                        {work.aiPmConnection}
-                      </p>
-
-                      {work.externalUrl && work.externalUrl !== "#" ? (
-                        <a
-                          href={work.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-medium text-white transition-opacity hover:opacity-90"
-                        >
-                          查看作品 →
-                        </a>
-                      ) : (
-                        <span className="inline-flex items-center justify-center rounded-full bg-foreground/[0.06] px-4 py-2 text-[0.8125rem] text-muted">
-                          即将上线
-                        </span>
+                      {work.date && (
+                        <p className="mt-2 text-[0.6875rem] text-muted/70">{work.date}</p>
                       )}
                     </div>
-                  </article>
+                  </Link>
                 ))}
               </div>
             </section>
           ),
       )}
-
-      <div className="rounded-2xl border border-dashed border-black/[0.1] bg-foreground/[0.02] p-6 text-center">
-        <p className="text-[0.875rem] text-muted">
-          更多作品链接正在整理中。发送摄影 / 建筑 / 设计作品集链接后，我会帮你更新到此页面。
-        </p>
-      </div>
     </div>
   );
 }

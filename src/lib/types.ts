@@ -82,6 +82,24 @@ export interface HomeContent {
   contactEmail: string;
 }
 
+export interface ExperienceItem {
+  id: string;
+  title: string;
+  organization: string;
+  location?: string;
+  startDate: string;
+  endDate: string;
+  role: string;
+  tags: string[];
+  highlights: string[];
+  pmConnection?: string;
+}
+
+export interface ExperienceContent {
+  internships: ExperienceItem[];
+  studentWork: ExperienceItem[];
+}
+
 export interface FooterContent {
   email: string;
   location: string;
@@ -137,11 +155,17 @@ export interface EducationContent {
 
 export type WorkType = "photography" | "architecture" | "design";
 
+export type PhotographySubtype =
+  | "portrait"
+  | "landscape"
+  | "architecture-photo";
+
 export interface Work {
   id: string;
   slug: string;
   title: string;
   type: WorkType;
+  subtype?: PhotographySubtype;
   summary: string;
   date?: string;
   cover?: string;

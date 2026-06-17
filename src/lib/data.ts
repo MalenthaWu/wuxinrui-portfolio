@@ -11,6 +11,7 @@ import type {
   ProjectCategoryConfig,
   SkillsContent,
   Work,
+  ExperienceContent,
 } from "./types";
 
 const contentDir = path.join(process.cwd(), "content");
@@ -34,6 +35,17 @@ export function getEducationContent(): EducationContent {
 
 export function getSkillsContent(): SkillsContent {
   return readJson<SkillsContent>(path.join(contentDir, "skills.json"));
+}
+
+export function getExperienceContent(): ExperienceContent {
+  return readJson<ExperienceContent>(path.join(contentDir, "experience.json"));
+}
+
+export function formatExperienceRange(item: {
+  startDate: string;
+  endDate: string;
+}): string {
+  return `${item.startDate} – ${item.endDate}`;
 }
 
 export function getProjectCategories(): ProjectCategoryConfig[] {
@@ -80,6 +92,10 @@ export function getWorks(): Work[] {
   return files
     .map((file) => readJson<Work>(path.join(worksDir, file)))
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+}
+
+export function getWorkBySlug(slug: string): Work | undefined {
+  return getWorks().find((work) => work.slug === slug);
 }
 
 export function getWorksByType(type: Work["type"]): Work[] {

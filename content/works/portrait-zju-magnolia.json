@@ -1,0 +1,24 @@
+{
+  "id": "portrait-zju-magnolia",
+  "slug": "portrait-zju-magnolia",
+  "title": "浙大西溪 · 粉玉兰",
+  "type": "photography",
+  "subtype": "portrait",
+  "summary": "校园春季花景中的人像创作。",
+  "date": "2025",
+  "cover": "/works/assets/photography/portrait/zju-magnolia/01.jpg",
+  "images": [
+    "/works/assets/photography/portrait/zju-magnolia/01.jpg",
+    "/works/assets/photography/portrait/zju-magnolia/02.jpg",
+    "/works/assets/photography/portrait/zju-magnolia/03.jpg"
+  ],
+  "pending": false,
+  "context": "浙江大学西溪校区玉兰花季拍摄。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "花色与服装色彩协调",
+    "利用花枝构建画面层次"
+  ],
+  "outcome": "形成校园季节主题人像作品。",
+  "aiPmConnection": "色彩与场景搭配能力适用于内容产品视觉规范。"
+}

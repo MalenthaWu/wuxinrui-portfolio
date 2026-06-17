@@ -3,6 +3,7 @@ import type { Project } from "./types";
 export const navItems = [
   { href: "/", label: "关于我" },
   { href: "/education", label: "教育经历" },
+  { href: "/experience", label: "工作经历" },
   { href: "/projects", label: "项目经历" },
   { href: "/works", label: "作品集" },
   { href: "/skills", label: "技能" },

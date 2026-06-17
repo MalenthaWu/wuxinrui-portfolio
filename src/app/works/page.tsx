@@ -14,7 +14,7 @@ export default function WorksPage() {
     <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
       <PageHeader
         title="作品集"
-        description="摄影、建筑与设计作品分类展示。发送链接后可持续更新。"
+        description="摄影、建筑与设计作品，共 14 组精选内容，支持图集详情浏览。"
       />
       <WorkList works={works} />
     </div>

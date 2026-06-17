@@ -1,0 +1,22 @@
+{
+  "id": "evolo",
+  "slug": "evolo",
+  "title": "Evolo 概念建筑",
+  "type": "architecture",
+  "summary": "国际竞赛导向的未来建筑概念方案。",
+  "date": "2024",
+  "cover": "/works/assets/architecture/evolo-1.jpg",
+  "images": [
+    "/works/assets/architecture/evolo-1.jpg",
+    "/works/assets/architecture/evolo-2.jpg"
+  ],
+  "pending": false,
+  "context": "探索未来建筑形态与空间组织。",
+  "myRole": "概念设计 / 建模渲染",
+  "decisions": [
+    "核心概念驱动形式",
+    "视觉冲击与空间逻辑平衡"
+  ],
+  "outcome": "完成概念方案可视化。",
+  "aiPmConnection": "复杂系统组织与信息架构设计相通。"
+}

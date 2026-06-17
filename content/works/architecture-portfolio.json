@@ -1,0 +1,22 @@
+{
+  "id": "architecture-portfolio",
+  "slug": "architecture-portfolio",
+  "title": "建筑设计作品集",
+  "type": "architecture",
+  "summary": "建筑学本科阶段综合设计成果。",
+  "date": "2020-2025",
+  "cover": "/works/assets/architecture/吴欣睿_作品成果（附简历）_04.png",
+  "images": [
+    "/works/assets/architecture/吴欣睿_作品成果（附简历）_04.png"
+  ],
+  "pending": false,
+  "externalUrl": "/works/assets/architecture/建筑设计作品集.pdf",
+  "context": "涵盖竞赛、课程与工作坊的建筑设计成果。",
+  "myRole": "方案设计 / 建模渲染",
+  "decisions": [
+    "概念到深化的完整表达",
+    "图解与模型结合"
+  ],
+  "outcome": "形成系统建筑设计作品集。",
+  "aiPmConnection": "端到端项目交付与结构化表达能力。"
+}

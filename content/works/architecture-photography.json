@@ -1,0 +1,29 @@
+{
+  "id": "architecture-photography",
+  "slug": "architecture-photography",
+  "title": "建筑摄影精选",
+  "type": "photography",
+  "subtype": "architecture-photo",
+  "summary": "国内外建筑空间的光影与结构记录。",
+  "date": "2024-2025",
+  "cover": "/works/assets/photography/architecture-photo/DSC07447-编辑-编辑-1 2.jpg",
+  "images": [
+    "/works/assets/photography/architecture-photo/DSC07447-编辑-编辑-1 2.jpg",
+    "/works/assets/photography/architecture-photo/DSC08126-已增强-NR.jpg",
+    "/works/assets/photography/architecture-photo/DSC08503-编辑-1.jpg",
+    "/works/assets/photography/architecture-photo/上海徐家汇天主教堂.png",
+    "/works/assets/photography/architecture-photo/佛光普照.jpg",
+    "/works/assets/photography/architecture-photo/南京紫峰大厦.jpg",
+    "/works/assets/photography/architecture-photo/大阪夜景.jpg",
+    "/works/assets/photography/architecture-photo/太和门.png"
+  ],
+  "pending": false,
+  "context": "记录经典建筑与城市地标的空间美学。",
+  "myRole": "建筑摄影创作",
+  "decisions": [
+    "结构线条与透视控制",
+    "天气与光线选择"
+  ],
+  "outcome": "积累建筑摄影作品集。",
+  "aiPmConnection": "空间理解力可支撑 3D/AIGC 场景类产品。"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "green-campus",
+  "slug": "green-campus",
+  "title": "绿色高校",
+  "type": "architecture",
+  "summary": "可持续理念下的高校建筑设计方案。",
+  "date": "2024",
+  "cover": "/works/assets/architecture/绿色高校-1.png",
+  "images": [
+    "/works/assets/architecture/绿色高校-1.png",
+    "/works/assets/architecture/绿色高校-2.png"
+  ],
+  "pending": false,
+  "context": "绿色校园与可持续建筑设计探索。",
+  "myRole": "方案设计",
+  "decisions": [
+    "生态与功能结合",
+    "绿色技术整合"
+  ],
+  "outcome": "形成完整高校设计表达。",
+  "aiPmConnection": "约束下的系统方案设计能力。"
+}

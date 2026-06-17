@@ -1,0 +1,30 @@
+{
+  "id": "landscape",
+  "slug": "landscape",
+  "title": "风光摄影精选",
+  "type": "photography",
+  "subtype": "landscape",
+  "summary": "自然风光与城市天际线，记录光影与空间氛围。",
+  "date": "2025",
+  "cover": "/works/assets/photography/landscape/1.jpg",
+  "images": [
+    "/works/assets/photography/landscape/1.jpg",
+    "/works/assets/photography/landscape/DSC00372-编辑.jpg",
+    "/works/assets/photography/landscape/DSC00390-编辑-编辑-2.jpg",
+    "/works/assets/photography/landscape/DSC03547.png",
+    "/works/assets/photography/landscape/DSC03969.jpg",
+    "/works/assets/photography/landscape/DSC04407.jpg",
+    "/works/assets/photography/landscape/DSC05804.jpg",
+    "/works/assets/photography/landscape/DSC07736.png"
+  ],
+  "pending": false,
+  "context": "记录不同时间、气候下的空间氛围与光影变化。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "黄金时刻强化层次",
+    "前景引导纵深",
+    "后期强调氛围"
+  ],
+  "outcome": "积累风光摄影系列，支撑自媒体内容输出。",
+  "aiPmConnection": "对光影与氛围的判断力，有助于评估 AIGC 生成图像的质量。"
+}

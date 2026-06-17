@@ -1,0 +1,28 @@
+{
+  "id": "portrait-xiaohe",
+  "slug": "portrait-xiaohe",
+  "title": "小河公园 · 人像",
+  "type": "photography",
+  "subtype": "portrait",
+  "summary": "城市公园场景下的人像叙事与情绪捕捉。",
+  "date": "2025",
+  "cover": "/works/assets/photography/portrait/xiaohe/01.jpg",
+  "images": [
+    "/works/assets/photography/portrait/xiaohe/01.jpg",
+    "/works/assets/photography/portrait/xiaohe/02.jpg",
+    "/works/assets/photography/portrait/xiaohe/03.jpg",
+    "/works/assets/photography/portrait/xiaohe/04.jpg",
+    "/works/assets/photography/portrait/xiaohe/06.jpg",
+    "/works/assets/photography/portrait/xiaohe/07.jpg",
+    "/works/assets/photography/portrait/xiaohe/08.jpg"
+  ],
+  "pending": false,
+  "context": "杭州小河公园外景人像创作。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "自然光与人物情绪结合",
+    "控制留白与视线引导"
+  ],
+  "outcome": "完成一组连贯的人像系列。",
+  "aiPmConnection": "构图叙事可迁移至内容产品与图像类 AI 质量标准。"
+}

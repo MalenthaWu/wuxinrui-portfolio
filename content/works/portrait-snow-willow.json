@@ -1,0 +1,25 @@
+{
+  "id": "portrait-snow-willow",
+  "slug": "portrait-snow-willow",
+  "title": "雪柳 · 人像",
+  "type": "photography",
+  "subtype": "portrait",
+  "summary": "雪柳花材主题的人像摄影。",
+  "date": "2025",
+  "cover": "/works/assets/photography/portrait/snow-willow/01.jpg",
+  "images": [
+    "/works/assets/photography/portrait/snow-willow/01.jpg",
+    "/works/assets/photography/portrait/snow-willow/02.jpg",
+    "/works/assets/photography/portrait/snow-willow/03.jpg",
+    "/works/assets/photography/portrait/snow-willow/04.jpg"
+  ],
+  "pending": false,
+  "context": "春季雪柳花材人像创作。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "花枝线条引导构图",
+    "柔和色调统一"
+  ],
+  "outcome": "完成清新风格人像系列。",
+  "aiPmConnection": "风格一致性判断适用于 AI 生成内容审核。"
+}

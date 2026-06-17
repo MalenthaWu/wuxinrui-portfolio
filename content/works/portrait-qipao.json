@@ -1,0 +1,25 @@
+{
+  "id": "portrait-qipao",
+  "slug": "portrait-qipao",
+  "title": "旗袍 · 绣球花",
+  "type": "photography",
+  "subtype": "portrait",
+  "summary": "传统服饰与花卉场景的人像表达。",
+  "date": "2025",
+  "cover": "/works/assets/photography/portrait/qipao/01.jpg",
+  "images": [
+    "/works/assets/photography/portrait/qipao/01.jpg",
+    "/works/assets/photography/portrait/qipao/02.jpg",
+    "/works/assets/photography/portrait/qipao/03.jpg",
+    "/works/assets/photography/portrait/qipao/04.jpg"
+  ],
+  "pending": false,
+  "context": "旗袍主题与绣球花场景结合。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "服饰与场景叙事统一",
+    "姿态引导与构图平衡"
+  ],
+  "outcome": "完成东方美学方向的人像系列。",
+  "aiPmConnection": "视觉叙事与审美标准适用于多模态内容产品。"
+}

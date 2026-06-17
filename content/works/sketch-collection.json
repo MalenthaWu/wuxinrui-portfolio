@@ -1,0 +1,24 @@
+{
+  "id": "sketch-collection",
+  "slug": "sketch-collection",
+  "title": "素描作品",
+  "type": "design",
+  "summary": "建筑与静物素描练习与创作。",
+  "date": "2021-2022",
+  "cover": "/works/assets/design/sketch/2021-03-25 130354.png",
+  "images": [
+    "/works/assets/design/sketch/2021-03-25 130354.png",
+    "/works/assets/design/sketch/2021-04-29 000800.png",
+    "/works/assets/design/sketch/2021-04-29 000911.png",
+    "/works/assets/design/sketch/2021-04-29 001056.png"
+  ],
+  "pending": false,
+  "context": "建筑学专业素描基础训练。",
+  "myRole": "创作者",
+  "decisions": [
+    "线条与明暗关系",
+    "空间体积表达"
+  ],
+  "outcome": "积累扎实造型基础。",
+  "aiPmConnection": "造型基础支撑视觉判断力。"
+}

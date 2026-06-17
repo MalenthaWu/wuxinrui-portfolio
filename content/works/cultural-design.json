@@ -1,0 +1,21 @@
+{
+  "id": "cultural-design",
+  "slug": "cultural-design",
+  "title": "文创设计",
+  "type": "design",
+  "summary": "文创产品与视觉衍生设计。",
+  "date": "2023",
+  "cover": "/works/assets/design/cultural/文创设计.png",
+  "images": [
+    "/works/assets/design/cultural/文创设计.png"
+  ],
+  "pending": false,
+  "context": "文创产品视觉设计探索。",
+  "myRole": "视觉设计",
+  "decisions": [
+    "文化元素提炼",
+    "产品化视觉转化"
+  ],
+  "outcome": "完成文创设计方案。",
+  "aiPmConnection": "文化 IP 视觉转化与产品化思维。"
+}

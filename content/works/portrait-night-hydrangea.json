@@ -1,0 +1,24 @@
+{
+  "id": "portrait-night-hydrangea",
+  "slug": "portrait-night-hydrangea",
+  "title": "夜景 · 绣球花",
+  "type": "photography",
+  "subtype": "portrait",
+  "summary": "夜景环境下的人像与花卉摄影。",
+  "date": "2025",
+  "cover": "/works/assets/photography/portrait/night-hydrangea/01.jpg",
+  "images": [
+    "/works/assets/photography/portrait/night-hydrangea/01.jpg",
+    "/works/assets/photography/portrait/night-hydrangea/02.jpg",
+    "/works/assets/photography/portrait/night-hydrangea/03.jpg"
+  ],
+  "pending": false,
+  "context": "低光环境下的绣球花人像挑战。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "控光与肤色还原",
+    "夜景氛围营造"
+  ],
+  "outcome": "拓展弱光人像创作能力。",
+  "aiPmConnection": "复杂场景下的质量标准制定经验。"
+}

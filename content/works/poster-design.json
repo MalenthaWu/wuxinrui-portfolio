@@ -1,19 +1,21 @@
 {
   "id": "poster-design",
   "slug": "poster-design",
-  "title": "海报与视觉设计",
+  "title": "海报设计",
   "type": "design",
-  "summary": "活动海报、宣传物料与视觉系统设计。",
-  "date": "2024",
-  "pending": true,
-  "externalUrl": "#",
-  "context": "为校园活动与个人项目制作视觉宣传物料。",
+  "summary": "活动海报与宣传视觉设计。",
+  "date": "2021-2024",
+  "cover": "/works/assets/design/poster/雷锋海报.png",
+  "images": [
+    "/works/assets/design/poster/雷锋海报.png"
+  ],
+  "pending": false,
+  "context": "校园活动与社会主题海报创作。",
   "myRole": "视觉设计",
   "decisions": [
-    "建立清晰的视觉层级与信息优先级",
-    "统一色彩与字体规范",
-    "确保不同尺寸媒介的适配"
+    "视觉层级清晰",
+    "色彩与字体统一"
   ],
-  "outcome": "完成多套海报与宣传物料，保障信息有效传达。",
-  "aiPmConnection": "视觉层级与一致性原则，直接应用于 AI 产品 UI 与设计系统构建。"
+  "outcome": "完成多套海报物料。",
+  "aiPmConnection": "视觉层级适用于 AI 产品 UI 设计。"
 }
