@@ -59,6 +59,7 @@ export interface CapabilityMapping {
 
 export interface HomeContent {
   name: string;
+  portrait?: string;
   tagline: string;
   subtitle: string;
   introParagraphs: string[];

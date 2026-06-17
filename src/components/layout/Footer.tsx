@@ -6,15 +6,15 @@ export function Footer() {
   const footer = getFooterContent();
 
   return (
-    <footer className="mt-auto border-t border-border bg-surface">
-      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-12 md:grid-cols-3">
+    <footer className="mt-auto border-t border-black/[0.06] bg-surface">
+      <div className="mx-auto grid max-w-5xl gap-10 px-6 py-14 md:grid-cols-3">
         <div className="space-y-3">
-          <p className="text-sm font-medium text-foreground">联系</p>
-          <div className="space-y-1 text-sm text-muted">
+          <p className="text-[0.8125rem] font-medium text-foreground">联系</p>
+          <div className="space-y-1.5 text-[0.8125rem] text-muted">
             <p>
               <a
                 href={`mailto:${footer.email}`}
-                className="transition-colors hover:text-foreground"
+                className="transition-colors hover:text-accent"
               >
                 {footer.email}
               </a>

@@ -1,5 +1,4 @@
 import type { CapabilityMapping } from "@/lib/types";
-import { Card } from "@/components/ui/primitives";
 
 export function CapabilityTable({
   items,
@@ -9,47 +8,65 @@ export function CapabilityTable({
   closingLine: string;
 }) {
   return (
-    <div className="space-y-6">
-      <div className="hidden overflow-hidden rounded-xl border border-border bg-surface md:block">
-        <table className="w-full text-left text-sm">
+    <div className="space-y-8">
+      <div className="hidden overflow-hidden rounded-2xl bg-surface shadow-[0_2px_24px_-4px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] md:block">
+        <table className="w-full text-left text-[0.9375rem]">
           <thead>
-            <tr className="border-b border-border bg-background">
-              <th className="px-5 py-3 font-medium text-foreground">关键词</th>
-              <th className="px-5 py-3 font-medium text-foreground">建筑侧能力</th>
-              <th className="px-5 py-3 font-medium text-foreground">AI PM 侧对应</th>
+            <tr className="border-b border-black/[0.06]">
+              <th className="px-6 py-4 text-[0.8125rem] font-medium uppercase tracking-wide text-muted">
+                关键词
+              </th>
+              <th className="px-6 py-4 text-[0.8125rem] font-medium uppercase tracking-wide text-muted">
+                建筑侧能力
+              </th>
+              <th className="px-6 py-4 text-[0.8125rem] font-medium uppercase tracking-wide text-muted">
+                AI PM 侧对应
+              </th>
             </tr>
           </thead>
           <tbody>
             {items.map((item) => (
-              <tr key={item.keyword} className="border-b border-border last:border-0">
-                <td className="px-5 py-4 font-medium text-foreground">{item.keyword}</td>
-                <td className="px-5 py-4 text-muted">{item.architectureSide}</td>
-                <td className="px-5 py-4 text-muted">{item.aiPmSide}</td>
+              <tr
+                key={item.keyword}
+                className="border-b border-black/[0.04] last:border-0"
+              >
+                <td className="px-6 py-5 font-medium text-foreground">
+                  {item.keyword}
+                </td>
+                <td className="px-6 py-5 text-muted">{item.architectureSide}</td>
+                <td className="px-6 py-5 text-muted">{item.aiPmSide}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <div className="grid gap-4 md:hidden">
+      <div className="grid gap-3 md:hidden">
         {items.map((item) => (
-          <Card key={item.keyword}>
-            <p className="mb-3 text-sm font-medium text-foreground">{item.keyword}</p>
-            <div className="space-y-2 text-sm text-muted">
+          <div
+            key={item.keyword}
+            className="rounded-2xl bg-surface p-5 shadow-[0_2px_16px_-4px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04]"
+          >
+            <p className="mb-3 text-[1rem] font-medium text-foreground">
+              {item.keyword}
+            </p>
+            <div className="space-y-2 text-[0.9375rem] text-muted">
               <p>
-                <span className="text-foreground">建筑：</span>
+                <span className="text-foreground/80">建筑 · </span>
                 {item.architectureSide}
               </p>
               <p>
-                <span className="text-foreground">AI PM：</span>
+                <span className="text-foreground/80">AI PM · </span>
                 {item.aiPmSide}
               </p>
             </div>
-          </Card>
+          </div>
         ))}
       </div>
 
-      <p className="text-sm text-muted">{closingLine}</p>
+      <p className="text-center text-[0.9375rem] leading-relaxed text-muted">
+        {closingLine}
+      </p>
     </div>
   );
 }
