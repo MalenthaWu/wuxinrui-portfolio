@@ -12,10 +12,10 @@ export default function ProjectsPage() {
   const categories = getProjectCategories();
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
+    <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
       <PageHeader
         title="项目经历"
-        description="AI 产品、Vibecoding 工具、网站搭建与研究实践，按类型分类，可持续更新。"
+        description="以 AI 产品逻辑拆解：痛点 → 用户 → 方案 → AI → 结果。"
       />
       <ProjectList projects={projects} categories={categories} />
     </div>

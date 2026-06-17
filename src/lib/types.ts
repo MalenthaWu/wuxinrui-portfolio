@@ -20,6 +20,14 @@ export interface ProjectCategoryConfig {
   order: number;
 }
 
+export interface ProductLogic {
+  problem: string;
+  users: string;
+  solution: string;
+  ai: string;
+  outcome: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -49,6 +57,7 @@ export interface Project {
   aiAspect?: string;
   decisions?: string[];
   metrics?: string[];
+  productLogic?: ProductLogic;
 }
 
 export interface CapabilityMapping {
@@ -59,12 +68,18 @@ export interface CapabilityMapping {
 
 export interface HomeContent {
   name: string;
+  englishName: string;
+  heroGreeting: string;
   portrait?: string;
   tagline: string;
   subtitle: string;
+  tags: string[];
+  aboutBrief: string;
   introParagraphs: string[];
   capabilityMapping: CapabilityMapping[];
   closingLine: string;
+  resumeUrl: string;
+  contactEmail: string;
 }
 
 export interface FooterContent {
@@ -77,13 +92,20 @@ export interface FooterContent {
 }
 
 export interface EducationItem {
+  id: string;
   school: string;
+  schoolEn?: string;
   degree: string;
   major: string;
   start: string;
   end: string;
+  city: string;
+  province: string;
+  logo?: string;
+  mapPosition: { x: number; y: number };
   highlights: string[];
   badges?: string[];
+  honors?: string[];
 }
 
 export interface HonorGroup {
@@ -95,6 +117,7 @@ export interface CompetitionItem {
   name: string;
   award: string;
   year?: string;
+  level?: string;
 }
 
 export interface ResearchItem {
@@ -123,6 +146,8 @@ export interface Work {
   date?: string;
   cover?: string;
   images?: string[];
+  externalUrl?: string;
+  pending?: boolean;
   context: string;
   myRole: string;
   decisions: string[];

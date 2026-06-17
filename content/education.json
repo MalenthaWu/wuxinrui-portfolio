@@ -1,22 +1,41 @@
 {
   "degrees": [
     {
+      "id": "zju",
       "school": "浙江大学",
+      "schoolEn": "Zhejiang University",
       "degree": "硕士",
       "major": "建筑",
       "start": "2025/09",
       "end": "2028/07",
+      "city": "杭州",
+      "province": "浙江",
+      "logo": "/logos/zju.svg",
+      "mapPosition": { "x": 78, "y": 62 },
       "highlights": ["985", "双一流"],
-      "badges": ["985", "双一流"]
+      "badges": ["985", "双一流"],
+      "honors": ["浙大研究生新媒体中心 · 摄影组长"]
     },
     {
+      "id": "cumt",
       "school": "中国矿业大学",
+      "schoolEn": "China University of Mining and Technology",
       "degree": "本科",
       "major": "建筑学",
       "start": "2020/09",
       "end": "2025/07",
+      "city": "徐州",
+      "province": "江苏",
+      "logo": "/logos/cumt.svg",
+      "mapPosition": { "x": 68, "y": 48 },
       "highlights": ["GPA 4.3/5.0", "综合成绩排名 1/84"],
-      "badges": ["211", "双一流"]
+      "badges": ["211", "双一流"],
+      "honors": [
+        "连续三年国家奖学金",
+        "校优秀毕业生",
+        "十佳女大学生",
+        "孙越崎能源科学技术优秀学生奖"
+      ]
     }
   ],
   "honors": [
@@ -32,13 +51,13 @@
     }
   ],
   "competitions": [
-    { "name": "亚洲学年设计奖", "award": "国家银奖" },
-    { "name": "全国高校数字艺术设计大赛", "award": "国家二等奖" },
-    { "name": "米兰设计周", "award": "国家二等奖" },
-    { "name": "全国学英语翻译赛", "award": "国家一等奖" },
-    { "name": "第十四届挑战杯大学生创业计划竞赛", "award": "省级银奖" },
-    { "name": "第九届互联网+大学生创业计划大赛", "award": "省二等奖" },
-    { "name": "第八届互联网+大学生创业计划大赛", "award": "省三等奖" }
+    { "name": "亚洲学年设计奖", "award": "国家银奖", "level": "国家级" },
+    { "name": "全国高校数字艺术设计大赛", "award": "国家二等奖", "level": "国家级" },
+    { "name": "米兰设计周", "award": "国家二等奖", "level": "国家级" },
+    { "name": "全国学英语翻译赛", "award": "国家一等奖", "level": "国家级" },
+    { "name": "第十四届挑战杯大学生创业计划竞赛", "award": "省级银奖", "level": "省级" },
+    { "name": "第九届互联网+大学生创业计划大赛", "award": "省二等奖", "level": "省级" },
+    { "name": "第八届互联网+大学生创业计划大赛", "award": "省三等奖", "level": "省级" }
   ],
   "research": [
     {
