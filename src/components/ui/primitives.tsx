@@ -9,10 +9,12 @@ export function PageHeader({
 }) {
   return (
     <div className="mb-12 space-y-3">
-      <h1 className="text-2xl font-medium tracking-tight text-foreground md:text-3xl">
+      <h1 className="text-[2rem] font-semibold italic tracking-[-0.03em] text-foreground md:text-[2.5rem]">
         {title}
       </h1>
-      {description && <p className="max-w-2xl text-sm text-muted">{description}</p>}
+      {description && (
+        <p className="max-w-2xl text-[0.9375rem] leading-relaxed text-muted">{description}</p>
+      )}
     </div>
   );
 }
@@ -29,7 +31,7 @@ export function Section({
   return (
     <section id={id} className="space-y-6">
       {title && (
-        <h2 className="text-lg font-medium tracking-tight text-foreground">
+        <h2 className="text-lg font-semibold italic tracking-tight text-foreground">
           {title}
         </h2>
       )}
@@ -46,9 +48,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div
-      className={`rounded-xl border border-border bg-surface p-5 ${className}`}
-    >
+    <div className={`liquid-glass rounded-2xl p-5 ${className}`}>
       {children}
     </div>
   );
@@ -56,7 +56,7 @@ export function Card({
 
 export function Tag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-border bg-background px-2.5 py-0.5 text-xs text-muted">
+    <span className="liquid-glass inline-flex items-center rounded-full px-2.5 py-0.5 text-xs text-muted">
       {children}
     </span>
   );
@@ -72,11 +72,11 @@ export function ButtonLink({
   variant?: "primary" | "secondary";
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm transition-colors";
+    "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm transition-all";
   const styles =
     variant === "primary"
-      ? "bg-foreground text-background hover:opacity-90"
-      : "border border-border bg-surface text-foreground hover:bg-background";
+      ? "liquid-glass-strong font-medium text-foreground hover:opacity-90"
+      : "liquid-glass text-foreground hover:bg-white/50";
 
   return (
     <a href={href} className={`${base} ${styles}`}>

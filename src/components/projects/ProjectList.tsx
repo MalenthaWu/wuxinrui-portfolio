@@ -36,21 +36,23 @@ export function ProjectList({
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => setActiveCategory(tab.id)}
-            className={`rounded-full px-4 py-2 text-[0.8125rem] font-medium transition-all ${
-              activeCategory === tab.id
-                ? "bg-foreground text-background"
-                : "bg-foreground/[0.04] text-muted hover:bg-foreground/[0.08] hover:text-foreground"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+      <div className="liquid-glass rounded-2xl p-3">
+        <div className="flex flex-wrap gap-2">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setActiveCategory(tab.id)}
+              className={`rounded-full px-4 py-2 text-[0.8125rem] font-medium transition-all ${
+                activeCategory === tab.id
+                  ? "liquid-glass-strong text-foreground"
+                  : "text-muted hover:bg-white/40 hover:text-foreground"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -61,10 +63,10 @@ export function ProjectList({
           return (
             <article
               key={project.id}
-              className="group flex flex-col rounded-2xl bg-surface p-4 ring-1 ring-black/[0.04] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.1)]"
+              className="liquid-glass group flex flex-col rounded-2xl p-4 transition-all hover:-translate-y-0.5"
             >
               <div className="mb-3 flex items-start justify-between gap-2">
-                <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[0.6875rem] font-medium text-accent">
+                <span className="liquid-glass rounded-full px-2.5 py-0.5 text-[0.6875rem] font-medium text-accent">
                   {categoryMap[project.category]}
                 </span>
                 <span className="text-[0.6875rem] text-muted">
@@ -103,7 +105,7 @@ export function ProjectList({
               </div>
 
               {isExpanded && (
-                <div className="mb-4 animate-[fadeIn_0.3s_ease-out] space-y-2 rounded-xl bg-foreground/[0.03] p-3">
+                <div className="liquid-glass mb-4 animate-[fadeIn_0.3s_ease-out] space-y-2 rounded-xl p-3">
                   {PRODUCT_STEPS.map((step) => (
                     <div key={step.key} className="flex gap-2 text-[0.75rem]">
                       <span
@@ -123,7 +125,7 @@ export function ProjectList({
                   {project.tags.slice(0, 2).map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-foreground/[0.04] px-2 py-0.5 text-[0.625rem] text-muted"
+                      className="liquid-glass rounded-full px-2 py-0.5 text-[0.625rem] text-muted"
                     >
                       {tag}
                     </span>

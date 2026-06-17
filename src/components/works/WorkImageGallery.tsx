@@ -40,7 +40,7 @@ export function WorkImageGallery({ images, title, onIndexChange }: WorkImageGall
 
   if (images.length === 0) {
     return (
-      <div className="flex min-h-[40vh] items-center justify-center rounded-[1.5rem] bg-foreground/[0.03] text-[0.875rem] text-muted">
+      <div className="liquid-glass flex min-h-[40vh] items-center justify-center rounded-[1.5rem] text-[0.875rem] text-muted">
         暂无图片
       </div>
     );
@@ -50,19 +50,20 @@ export function WorkImageGallery({ images, title, onIndexChange }: WorkImageGall
 
   return (
     <div className="space-y-4">
-      <div className="group relative overflow-hidden rounded-[1.5rem] bg-[#f0f0f2] ring-1 ring-black/[0.05]">
-        <div className="relative flex min-h-[min(72vh,640px)] w-full items-center justify-center p-3 md:min-h-[min(68vh,720px)] md:p-6">
+      <div className="group relative overflow-hidden rounded-[1.75rem] liquid-glass">
+        <div className="relative flex min-h-[min(72vh,640px)] w-full items-center justify-center p-3 md:min-h-[min(68vh,720px)] md:p-7">
           <Image
             key={current}
             src={assetPath(current)}
             alt={`${title} ${index + 1}`}
             width={1600}
             height={1200}
-            className="max-h-[min(68vh,680px)] w-auto max-w-full object-contain animate-[fadeIn_0.35s_ease-out]"
+            className="max-h-[min(68vh,680px)] w-auto max-w-full rounded-xl object-contain animate-[fadeIn_0.35s_ease-out]"
             sizes="(max-width: 768px) 100vw, 80vw"
             priority={index === 0}
           />
         </div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/35 to-transparent" />
 
         {images.length > 1 && (
           <>
@@ -70,7 +71,7 @@ export function WorkImageGallery({ images, title, onIndexChange }: WorkImageGall
               type="button"
               onClick={() => goTo(index - 1)}
               disabled={index === 0}
-              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/90 text-foreground shadow-md ring-1 ring-black/[0.06] transition-opacity hover:bg-surface disabled:pointer-events-none disabled:opacity-0 md:left-5 md:h-11 md:w-11"
+              className="liquid-glass-strong absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-foreground transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-0 md:left-5 md:h-11 md:w-11"
               aria-label="上一张"
             >
               ←
@@ -79,7 +80,7 @@ export function WorkImageGallery({ images, title, onIndexChange }: WorkImageGall
               type="button"
               onClick={() => goTo(index + 1)}
               disabled={index === images.length - 1}
-              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-surface/90 text-foreground shadow-md ring-1 ring-black/[0.06] transition-opacity hover:bg-surface disabled:pointer-events-none disabled:opacity-0 md:right-5 md:h-11 md:w-11"
+              className="liquid-glass-strong absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-foreground transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-0 md:right-5 md:h-11 md:w-11"
               aria-label="下一张"
             >
               →
@@ -100,8 +101,8 @@ export function WorkImageGallery({ images, title, onIndexChange }: WorkImageGall
               onClick={() => goTo(i)}
               className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-xl ring-2 transition-all md:h-20 md:w-20 ${
                 i === index
-                  ? "ring-accent"
-                  : "ring-transparent opacity-70 hover:opacity-100"
+                  ? "ring-accent shadow-[0_8px_22px_-14px_rgba(0,113,227,0.75)]"
+                  : "ring-transparent opacity-65 hover:opacity-100"
               }`}
               aria-label={`查看第 ${i + 1} 张`}
               aria-current={i === index}

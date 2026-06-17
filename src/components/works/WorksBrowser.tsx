@@ -88,33 +88,43 @@ export function WorksBrowser({ works }: { works: Work[] }) {
 
   if (filteredWorks.length === 0) {
     return (
-      <div className="rounded-2xl bg-surface p-10 text-center text-muted ring-1 ring-black/[0.04]">
+      <div className="liquid-glass rounded-2xl p-10 text-center text-muted">
         该分类下暂无作品
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap gap-2">
+    <div className="space-y-8">
+      <div className="liquid-glass rounded-2xl p-3">
+        <div className="mb-2 flex items-center justify-between px-1">
+          <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-muted">
+            分类浏览
+          </p>
+          <span className="liquid-glass rounded-full px-2.5 py-1 text-[0.6875rem] text-muted">
+            共 {filteredWorks.length} 组
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-2">
         {TABS.map((tab) => (
           <button
             key={tab.id}
             type="button"
             onClick={() => selectType(tab.id)}
             className={`rounded-full px-4 py-2 text-[0.8125rem] font-medium transition-all ${
-              activeType === tab.id
-                ? "bg-foreground text-background"
-                : "bg-foreground/[0.04] text-muted hover:text-foreground"
+                activeType === tab.id
+                  ? "liquid-glass-strong text-foreground"
+                  : "text-muted hover:bg-white/40 hover:text-foreground"
             }`}
           >
             {tab.label}
           </button>
         ))}
+        </div>
       </div>
 
       {(activeType === "all" || activeType === "photography") && (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 px-1">
           {PHOTO_TABS.map((tab) => {
             const isPhotoContext = activeType === "photography";
             const isActive = isPhotoContext
@@ -132,7 +142,7 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                   key={tab.id}
                   type="button"
                   onClick={() => selectPhotoSubtype(tab.id)}
-                  className="rounded-full bg-foreground/[0.04] px-3 py-1.5 text-[0.75rem] text-muted transition-colors hover:bg-foreground/[0.08] hover:text-foreground"
+                  className="liquid-glass rounded-full px-3 py-1.5 text-[0.75rem] text-muted transition-colors hover:text-foreground"
                 >
                   {tab.label}
                 </button>
@@ -148,8 +158,8 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                 onClick={() => selectPhotoSubtype(tab.id)}
                 className={`rounded-full px-3 py-1.5 text-[0.75rem] font-medium transition-all ${
                   isActive
-                    ? "bg-accent/10 text-accent"
-                    : "bg-foreground/[0.04] text-muted hover:text-foreground"
+                    ? "liquid-glass-strong text-accent"
+                    : "liquid-glass text-muted hover:text-foreground"
                 }`}
               >
                 {tab.label}
@@ -159,10 +169,10 @@ export function WorksBrowser({ works }: { works: Work[] }) {
         </div>
       )}
 
-      <div className="grid gap-6 lg:grid-cols-[240px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1fr)]">
-        <aside className="space-y-2 lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto lg:pr-1">
-          <p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-muted">
-            作品列表 · {filteredWorks.length}
+      <div className="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] xl:grid-cols-[300px_minmax(0,1fr)]">
+        <aside className="liquid-glass space-y-2 rounded-[1.5rem] p-3 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
+          <p className="mb-2 px-1 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-muted">
+            作品列表
           </p>
           {filteredWorks.map((work) => {
             const isActive = work.slug === selectedWork?.slug;
@@ -175,11 +185,11 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                 onClick={() => selectWork(work.slug)}
                 className={`flex w-full items-center gap-3 rounded-2xl p-2 text-left transition-all ${
                   isActive
-                    ? "bg-foreground text-background shadow-md"
-                    : "bg-surface ring-1 ring-black/[0.04] hover:ring-black/[0.08]"
+                    ? "liquid-glass-strong text-foreground"
+                    : "hover:bg-white/35"
                 }`}
               >
-                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-foreground/[0.04]">
+                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-foreground/[0.04] ring-1 ring-black/[0.04]">
                   {thumb ? (
                     <Image
                       src={assetPath(thumb)}
@@ -198,7 +208,7 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                   <p className="truncate text-[0.8125rem] font-medium">{work.title}</p>
                   <p
                     className={`mt-0.5 truncate text-[0.6875rem] ${
-                      isActive ? "text-background/70" : "text-muted"
+                      isActive ? "text-muted" : "text-muted"
                     }`}
                   >
                     {work.subtype
@@ -209,6 +219,7 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                     {work.images?.length ? ` · ${work.images.length} 张` : ""}
                   </p>
                 </div>
+                {isActive && <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />}
               </button>
             );
           })}
@@ -217,19 +228,37 @@ export function WorksBrowser({ works }: { works: Work[] }) {
         <div className="min-w-0 space-y-5">
           {selectedWork && (
             <>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <div>
+                  <h3 className="text-[1.125rem] font-semibold tracking-[-0.02em] text-foreground">
+                    {selectedWork.title}
+                  </h3>
+                  <p className="mt-0.5 text-[0.8125rem] text-muted">
+                    当前查看 {images.length} 张图 · 使用键盘 ← → 快速切换
+                  </p>
+                </div>
+                <span className="liquid-glass rounded-full px-3 py-1 text-[0.75rem] font-medium text-accent">
+                  {selectedWork.type === "photography"
+                    ? "摄影"
+                    : selectedWork.type === "architecture"
+                      ? "建筑"
+                      : "设计"}
+                </span>
+              </div>
+
               <WorkImageGallery
                 key={selectedWork.slug}
                 images={images}
                 title={selectedWork.title}
               />
 
-              <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="liquid-glass flex flex-wrap items-center justify-between gap-3 rounded-2xl p-3">
                 <div className="flex gap-2">
                   <button
                     type="button"
                     disabled={!prev}
                     onClick={() => prev && selectWork(prev.slug)}
-                    className="rounded-full bg-foreground/[0.06] px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-foreground/[0.1] disabled:opacity-40"
+                    className="liquid-glass rounded-full px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-white/40 disabled:opacity-40"
                   >
                     ← 上一组
                   </button>
@@ -237,7 +266,7 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                     type="button"
                     disabled={!next}
                     onClick={() => next && selectWork(next.slug)}
-                    className="rounded-full bg-foreground/[0.06] px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-foreground/[0.1] disabled:opacity-40"
+                    className="liquid-glass rounded-full px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-white/40 disabled:opacity-40"
                   >
                     下一组 →
                   </button>
@@ -247,13 +276,17 @@ export function WorksBrowser({ works }: { works: Work[] }) {
                   <button
                     type="button"
                     onClick={() => setShowMeta((value) => !value)}
-                    className="rounded-full bg-surface px-4 py-2 text-[0.8125rem] font-medium text-foreground ring-1 ring-black/[0.06] transition-colors hover:bg-foreground/[0.03]"
+                    className={`rounded-full px-4 py-2 text-[0.8125rem] font-medium transition-all ${
+                      showMeta
+                        ? "liquid-glass-strong text-foreground"
+                        : "liquid-glass text-foreground hover:bg-white/40"
+                    }`}
                   >
                     {showMeta ? "收起介绍" : "作品介绍"}
                   </button>
                   <Link
                     href={`/works/${selectedWork.slug}`}
-                    className="rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-medium text-white transition-opacity hover:opacity-90"
+                    className="liquid-glass-strong rounded-full px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-opacity hover:opacity-90"
                   >
                     独立页面
                   </Link>

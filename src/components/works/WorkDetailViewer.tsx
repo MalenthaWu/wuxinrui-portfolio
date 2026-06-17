@@ -20,12 +20,12 @@ export function WorkDetailViewer({
     <>
       <WorkImageGallery images={images} title={work.title} />
 
-      <div className="mb-10 flex flex-wrap items-center justify-between gap-3">
+      <div className="liquid-glass mb-10 flex flex-wrap items-center justify-between gap-3 rounded-2xl p-3">
         <div className="flex gap-2">
           {prev ? (
             <Link
               href={`/works/${prev.slug}`}
-              className="rounded-full bg-foreground/[0.06] px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-foreground/[0.1]"
+              className="liquid-glass rounded-full px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-white/60"
             >
               ← {prev.title}
             </Link>
@@ -37,7 +37,7 @@ export function WorkDetailViewer({
           {next ? (
             <Link
               href={`/works/${next.slug}`}
-              className="rounded-full bg-foreground/[0.06] px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-foreground/[0.1]"
+              className="liquid-glass rounded-full px-4 py-2 text-[0.8125rem] font-medium text-foreground transition-colors hover:bg-white/60"
             >
               {next.title} →
             </Link>

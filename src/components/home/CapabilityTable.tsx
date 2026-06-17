@@ -9,7 +9,7 @@ export function CapabilityTable({
 }) {
   return (
     <div className="space-y-8">
-      <div className="hidden overflow-hidden rounded-2xl bg-surface shadow-[0_2px_24px_-4px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] md:block">
+      <div className="liquid-glass hidden overflow-hidden rounded-2xl md:block">
         <table className="w-full text-left text-[0.9375rem]">
           <thead>
             <tr className="border-b border-black/[0.06]">
@@ -45,7 +45,7 @@ export function CapabilityTable({
         {items.map((item) => (
           <div
             key={item.keyword}
-            className="rounded-2xl bg-surface p-5 shadow-[0_2px_16px_-4px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04]"
+            className="liquid-glass rounded-2xl p-5"
           >
             <p className="mb-3 text-[1rem] font-medium text-foreground">
               {item.keyword}
@@ -64,7 +64,7 @@ export function CapabilityTable({
         ))}
       </div>
 
-      <p className="text-center text-[0.9375rem] leading-relaxed text-muted">
+      <p className="liquid-glass mx-auto max-w-3xl rounded-2xl px-5 py-4 text-center text-[0.9375rem] leading-relaxed text-muted">
         {closingLine}
       </p>
     </div>

@@ -4,7 +4,7 @@ import { WorksBrowser } from "./WorksBrowser";
 
 function WorksBrowserFallback() {
   return (
-    <div className="flex min-h-[50vh] items-center justify-center rounded-2xl bg-surface text-[0.875rem] text-muted ring-1 ring-black/[0.04]">
+    <div className="flex min-h-[50vh] items-center justify-center rounded-2xl liquid-glass text-[0.875rem] text-muted">
       加载作品集…
     </div>
   );
