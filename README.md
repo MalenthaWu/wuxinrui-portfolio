@@ -20,35 +20,40 @@ npm start
 
 ## GitHub 托管与自动同步
 
-### 一次性设置
+**仓库地址：** https://github.com/MalenthaWu/wuxinrui-portfolio
 
-1. **推送到 GitHub**（仓库：`MalenthaWu/wuxinrui-portfolio`）
-2. **连接 Vercel**（推荐，最简单）：
-   - 打开 [vercel.com/new](https://vercel.com/new)
-   - 选择 GitHub 仓库 `wuxinrui-portfolio`
-   - 直接 Deploy（Next.js 会自动识别）
-3. 之后每次 `git push` 到 `main`，Vercel 会 **自动重新部署**，网站实时同步。
+### 一次性设置（约 2 分钟）
+
+1. 打开 **[vercel.com/new](https://vercel.com/new)** 并登录
+2. 点击 **Import Git Repository**，选择 `MalenthaWu/wuxinrui-portfolio`
+3. 保持默认配置（Framework: Next.js），点击 **Deploy**
+4. 部署完成后会得到线上地址，例如 `https://wuxinrui-portfolio.vercel.app`
+
+之后每次向 GitHub 的 `main` 分支 **push**，Vercel 会 **自动重新构建并上线**（约 1～2 分钟）。
 
 ### 日常更新流程
 
 ```bash
+cd ~/Projects/wuxinrui-portfolio
+
 # 1. 修改 content/ 下的 JSON 或页面代码
 # 2. 提交并推送
 git add .
-git commit -m "更新项目内容"
+git commit -m "更新：描述你改了什么"
 git push
 ```
 
-推送后约 1～2 分钟，线上网站自动更新。
+推送后无需其他操作，线上网站会自动同步。
 
-### 备选：GitHub Actions 部署
+### 常用命令
 
-若使用 `.github/workflows/deploy.yml`，需在 GitHub 仓库 Settings → Secrets 添加：
+```bash
+# 本地预览
+npm run dev
 
-- `VERCEL_TOKEN` — [vercel.com/account/tokens](https://vercel.com/account/tokens)
-- `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` — 运行 `vercel link` 后在 `.vercel/project.json` 中查看
-
-**更推荐**直接使用 Vercel 的 GitHub 集成（无需配置 Secrets）。
+# 本地构建检查
+npm run build
+```
 
 ## 站点结构
 
