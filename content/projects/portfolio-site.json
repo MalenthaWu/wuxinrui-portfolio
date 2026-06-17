@@ -1,0 +1,20 @@
+{
+  "id": "portfolio-site",
+  "slug": "portfolio-site",
+  "title": "个人简历网站",
+  "category": "website",
+  "summary": "面向 AI PM 岗位的个人简历与作品集网站，数据驱动、可持续更新。",
+  "date": "2026/06",
+  "role": "独立开发者",
+  "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+  "featured": true,
+  "status": "in-progress",
+  "problem": "需要一套清晰展示 AI PM 能力、项目分类与作品集的 personal site，且便于持续追加内容。",
+  "myContribution": "独立完成信息架构、UI 设计、前后端开发与内容数据层搭建。",
+  "outcome": "实现 5 板块结构、项目类型分类、JSON 数据驱动更新机制。",
+  "pmTakeaway": "将个人品牌与能力证据链产品化，本身即一次 0→1 的站点产品实践。",
+  "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+  "deployTarget": "Vercel",
+  "siteUrl": "#",
+  "vibecodingNote": "使用 Cursor + AI 辅助完成组件开发与内容结构迭代。"
+}

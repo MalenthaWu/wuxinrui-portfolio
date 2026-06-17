@@ -1,0 +1,18 @@
+{
+  "id": "example-vibecoding-tool",
+  "slug": "example-vibecoding-tool",
+  "title": "[示例] AI 辅助效率工具",
+  "category": "vibecoding-tool",
+  "summary": "使用 Vibecoding 快速搭建的效率小工具，解决特定工作流程中的重复劳动。",
+  "date": "2026/06",
+  "role": "独立开发者",
+  "tags": ["Cursor", "Vibecoding", "自动化"],
+  "status": "completed",
+  "problem": "日常工作中存在可自动化的重复流程，需要快速验证工具方案。",
+  "myContribution": "独立完成需求定义、Vibecoding 开发与测试迭代。",
+  "outcome": "在短周期内完成可用 MVP，验证工具价值。",
+  "pmTakeaway": "体现快速原型能力与 AI 辅助开发工作流理解。",
+  "stack": ["TypeScript", "Node.js"],
+  "vibecodingNote": "使用 Cursor + Claude 完成核心逻辑开发与重构。",
+  "buildTime": "3 天"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "吴欣睿",
+  "tagline": "浙大建筑学背景 · 走向 AI 产品经理 · 关注 AIGC 与内容产品",
+  "subtitle": "用建筑训练的系统思维与视觉判断，做可落地、有质量标准的 AI 产品。",
+  "introParagraphs": [
+    "从建筑到 AI 产品，不是换赛道，而是把同一套能力用到新的媒介上：建筑教我用系统思维拆问题，用审美标准控质量，用协作推落地，用 AIGC 与参数化工具理解「人 + 算法」如何一起工作。",
+    "这些能力在 AIGC 产品、内容产品尤其重要——因为这类产品最难的，往往不只是技术，而是输出是否可信、好用、好看、可持续迭代。"
+  ],
+  "capabilityMapping": [
+    {
+      "keyword": "团队协作",
+      "architectureSide": "多专业协作、评图汇报",
+      "aiPmSide": "跨研发 / 设计 / 运营协作"
+    },
+    {
+      "keyword": "审美与视觉",
+      "architectureSide": "空间、构图、材质、表达",
+      "aiPmSide": "多模态质量、UI、内容审美"
+    },
+    {
+      "keyword": "逻辑与结构",
+      "architectureSide": "方案阶段、功能分区、深化逻辑",
+      "aiPmSide": "PRD、信息架构、路线图、优先级"
+    },
+    {
+      "keyword": "抗压与迭代",
+      "architectureSide": "赶图、多轮修改、竞赛与 workshop",
+      "aiPmSide": "0→1、需求变更、上线攻坚"
+    },
+    {
+      "keyword": "AIGC 实践",
+      "architectureSide": "AIGC 辅助效果图 / 概念 / 视频",
+      "aiPmSide": "AIGC 工作流、质量把关"
+    },
+    {
+      "keyword": "参数化 / 算法兴趣",
+      "architectureSide": "Grasshopper、性能模拟",
+      "aiPmSide": "算法直觉、参数与评估"
+    }
+  ],
+  "closingLine": "建筑给我的是决策方式和质量标准；AI PM 是我把这套方式用在智能产品上的方向。"
+}

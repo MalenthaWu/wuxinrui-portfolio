@@ -1,0 +1,17 @@
+{
+  "id": "portrait-photography",
+  "slug": "portrait-photography",
+  "title": "人像摄影精选",
+  "type": "photography",
+  "summary": "人像构图、光影与情绪表达系列作品。",
+  "date": "2025",
+  "context": "持续探索人像摄影中的叙事与视觉节奏。",
+  "myRole": "摄影创作与后期",
+  "decisions": [
+    "注重自然光与人物情绪的结合",
+    "控制画面留白与视线引导",
+    "后期保持肤色真实与氛围统一"
+  ],
+  "outcome": "形成稳定的人像创作风格，部分作品用于自媒体传播。",
+  "aiPmConnection": "构图与叙事能力可迁移至内容产品与图像类 AI 输出质量标准制定。"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "xuzhou-housing",
+  "slug": "xuzhou-housing",
+  "title": "徐州传统民居更新策略研究",
+  "category": "research-workshop",
+  "summary": "基于双碳背景的乡土民居更新研究，参数化建模驱动设计决策。",
+  "date": "2024",
+  "role": "第一作者 / 第一主持人",
+  "tags": ["参数化", "大创", "期刊论文"],
+  "problem": "如何在地域约束下，形成数据驱动的民居更新策略？",
+  "myContribution": "主持省级大创项目；实地调研采集需求；运用 Grasshopper 进行多变量性能模拟与优化。",
+  "outcome": "第一作者发表于《城镇建设》国家级期刊；形成可复用的研究方法论。",
+  "pmTakeaway": "数据驱动决策与多变量权衡，与产品指标迭代思维相通。"
+}

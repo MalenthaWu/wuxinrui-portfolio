@@ -1,0 +1,24 @@
+{
+  "id": "unique-id",
+  "slug": "url-slug",
+  "title": "项目标题",
+  "category": "vibecoding-tool",
+  "summary": "一句话摘要",
+  "date": "2026-06",
+  "role": "独立开发者",
+  "tags": ["标签1", "标签2"],
+  "featured": false,
+  "status": "completed",
+  "problem": "要解决什么问题",
+  "myContribution": "我具体做了什么",
+  "outcome": "结果与收获",
+  "pmTakeaway": "这证明了什么 AI PM 能力",
+  "links": [
+    { "label": "在线 Demo", "url": "https://example.com", "type": "demo" }
+  ],
+  "stack": ["Next.js", "TypeScript"],
+  "vibecodingNote": "用 Cursor + Claude 完成…",
+  "buildTime": "3 天",
+  "siteUrl": "https://example.com",
+  "deployTarget": "Vercel"
+}

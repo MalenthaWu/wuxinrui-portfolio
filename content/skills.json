@@ -1,0 +1,132 @@
+{
+  "skillGroups": [
+    {
+      "category": "产品能力",
+      "items": [
+        { "name": "用户访谈与需求分析", "level": "实践中" },
+        { "name": "竞品分析", "level": "实践中" },
+        { "name": "MVP 实验设计", "level": "实践中" },
+        { "name": "PRD 与信息架构", "level": "实践中" },
+        { "name": "Figma 高保真原型", "level": "熟悉" },
+        { "name": "数据分析与 A/B 测试", "level": "了解" }
+      ]
+    },
+    {
+      "category": "AI 相关",
+      "items": [
+        { "name": "ChatGPT / Claude / Gemini", "level": "熟悉" },
+        { "name": "Codex / Cursor Vibecoding", "level": "实践中" },
+        { "name": "Prompt 与工作流设计", "level": "实践中" },
+        { "name": "AIGC 多模态应用", "level": "实践中", "note": "Nano Banana、即梦、Seedance 等" },
+        { "name": "AI 产品评估与边界设计", "level": "实践中" }
+      ]
+    },
+    {
+      "category": "设计与创意",
+      "items": [
+        { "name": "Photoshop / Lightroom", "level": "熟悉" },
+        { "name": "Illustrator / 剪映", "level": "熟悉" },
+        { "name": "AutoCAD / SketchUp / Rhino", "level": "熟悉" },
+        { "name": "Grasshopper 参数化建模", "level": "实践中" },
+        { "name": "视觉表达与设计系统", "level": "熟悉" }
+      ]
+    },
+    {
+      "category": "内容与传播",
+      "items": [
+        { "name": "选题策划与内容生产", "level": "实践中" },
+        { "name": "自媒体运营与增长", "level": "实践中" },
+        { "name": "数据复盘与策略迭代", "level": "实践中" },
+        { "name": "公众号运营", "level": "熟悉" }
+      ]
+    },
+    {
+      "category": "工具与其他",
+      "items": [
+        { "name": "Notion / 飞书", "level": "熟悉" },
+        { "name": "墨刀 / Xmind", "level": "熟悉" },
+        { "name": "CET-6（510）", "level": "" },
+        { "name": "计算机二级", "level": "" },
+        { "name": "普通话二级甲等", "level": "" }
+      ]
+    }
+  ],
+  "mediaOverview": {
+    "accountName": "肆 Fours",
+    "direction": "摄影创作方向，独立运营小红书 / 抖音 / 微信问一问",
+    "aiPmConnection": [
+      "内容策略与用户洞察，帮助我理解 C 端用户真实需求与痛点",
+      "数据驱动迭代，培养产品指标思维与增长意识",
+      "摄影赛道理解，为影像类、AIGC 与内容类产品提供场景研究基础"
+    ],
+    "methodology": [
+      "选题策划 → 内容生产 → 发布 → 数据复盘",
+      "建立摄影内容案例库，跟踪平台热点与流量机制",
+      "设备横评经验：Sony A7M5/A7R3、DJI 系列、理光 GR3 等"
+    ]
+  },
+  "mediaPlatforms": [
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "handle": "肆 Fours",
+      "url": "#",
+      "positioning": "摄影创作与器材体验分享",
+      "stats": {
+        "粉丝": "2000+",
+        "累计曝光": "50 万+",
+        "单篇最高曝光": "10 万+"
+      },
+      "updateFrequency": "持续更新"
+    },
+    {
+      "id": "douyin",
+      "name": "抖音",
+      "handle": "肆 Fours",
+      "url": "#",
+      "positioning": "摄影短视频与视觉表达",
+      "stats": {
+        "关注增长": "300%+"
+      },
+      "updateFrequency": "持续更新"
+    },
+    {
+      "id": "wenzai",
+      "name": "微信问一问",
+      "handle": "肆 Fours",
+      "url": "#",
+      "positioning": "摄影问答与用户互动",
+      "updateFrequency": "活跃"
+    }
+  ],
+  "mediaContents": [
+    {
+      "id": "media-1",
+      "slug": "photography-tips-series",
+      "platformId": "xiaohongshu",
+      "title": "摄影技巧系列内容",
+      "type": "图文",
+      "summary": "围绕器材选择、拍摄技巧与后期处理，持续输出高互动摄影内容。",
+      "stats": { "曝光": "10 万+" },
+      "aiPmConnection": "从用户评论与数据中提炼内容偏好，迭代选题策略。"
+    },
+    {
+      "id": "media-2",
+      "slug": "gear-review",
+      "platformId": "xiaohongshu",
+      "title": "摄影器材横评",
+      "type": "图文",
+      "summary": "基于真实使用体验，对比主流相机与镜头，分析用户选购痛点。",
+      "aiPmConnection": "具备从用户视角评估硬件体验的能力，可支撑影像类产品研究。"
+    },
+    {
+      "id": "media-3",
+      "slug": "short-video",
+      "platformId": "douyin",
+      "title": "摄影短视频创作",
+      "type": "视频",
+      "summary": "结合热点活动与视觉叙事，测试不同内容形式的传播效果。",
+      "aiPmConnection": "理解内容分发机制与用户注意力规律。"
+    }
+  ]
+}

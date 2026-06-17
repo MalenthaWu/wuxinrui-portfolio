@@ -1,0 +1,16 @@
+{
+  "id": "thermotropic-house",
+  "slug": "thermotropic-house",
+  "title": "Thermotropic House｜AI 辅助建筑概念设计",
+  "category": "research-workshop",
+  "summary": "中瑞合作工作坊，探索 2050 未来低碳居住场景与 AI 协同设计工作流。",
+  "startDate": "2026/01",
+  "endDate": "2026/04",
+  "role": "项目成员",
+  "tags": ["AIGC", "未来场景", "工作坊"],
+  "problem": "如何基于未来热舒适需求，探索空间与智能穿戴协同的居住场景？",
+  "myContribution": "参与未来场景研究与用户需求分析；利用 Nanobanana + GPT image2 进行概念方案生成；建立 AIGC 协同工作流；用即梦完成概念视频。",
+  "outcome": "输出系统化未来住宅概念展示方案，验证 AI 辅助建筑概念设计流程。",
+  "pmTakeaway": "理解 AIGC 在设计流程中的定位与人机协同迭代方式。",
+  "aiAspect": "Nanobanana、GPT image2、即梦等多工具 AIGC 工作流"
+}

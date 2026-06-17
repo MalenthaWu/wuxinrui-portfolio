@@ -1,0 +1,7 @@
+[
+  { "id": "ai-product", "label": "AI 产品", "description": "AI 与产品向完整案例", "order": 1 },
+  { "id": "vibecoding-tool", "label": "Vibecoding 工具", "description": "AI 辅助编程的小工具与应用", "order": 2 },
+  { "id": "website", "label": "网站搭建", "description": "独立搭建与部署的网站", "order": 3 },
+  { "id": "research-workshop", "label": "研究 / 工作坊", "description": "建筑研究、工作坊与竞赛项目", "order": 4 },
+  { "id": "campus-ops", "label": "校园 / 运营", "description": "组织、内容运营与团队统筹", "order": 5 }
+]
